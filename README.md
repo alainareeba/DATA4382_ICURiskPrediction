@@ -22,6 +22,10 @@ Key components include:
   
 ICU Dashboard: 
 https://data4382icuriskprediction.streamlit.app/
+---
+
+# Our Pipeline 
+<img width="621" height="1834" alt="image" src="https://github.com/user-attachments/assets/01ffa0b4-16b4-48f2-96cd-5009e4062f4c" />
 
 ---
 # Data
