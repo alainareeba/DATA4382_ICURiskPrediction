@@ -24,7 +24,10 @@ Key components include:
 ---
 
 # Our Pipeline 
+
 <img width="621" height="1834" alt="image" src="https://github.com/user-attachments/assets/01ffa0b4-16b4-48f2-96cd-5009e4062f4c" />
+
+Figure 1: Distribution of target variable, bad_outcome
 
 ---
 # Data
@@ -43,3 +46,118 @@ The data was preprocessed through the following steps:
 - Performed feature engineering, including clinical ratios and aggregated vital sign statistics, which allow the model to gain more insight for each patient's physiology
 - Applied one-hot encoding to categorical variables
 - Constructed the final modeling dataset for reproducible machine learning workflows
+
+---
+# Exploratory Data Analysis (EDA)
+Key exploratory analyses conducted include:
+- Distribution of bad outcomes across the ICU population
+- Feature correlation analysis and risk stratification patterns
+- Distribution of ICU types across different levels of care in the dataset
+
+## Visualizing our data: 
+<img width="385" height="279" alt="Screenshot 2026-05-01 at 23 09 29" src="https://github.com/user-attachments/assets/96ddab68-f46f-4089-8d76-799393575806" />
+Figure 2: Distribution of target variable, bad_outcome
+
+<img width="1211" height="289" alt="Screenshot 2026-05-01 at 23 18 01" src="https://github.com/user-attachments/assets/ffd00147-1a4f-4007-aa07-c0d30f97b6c5" />
+Figure 3: Distribution of target
+variable, bad_outcome, across deaths and readmits (cleaned dataset version included)
+
+---
+
+<img width="743" height="580" alt="Screenshot 2026-05-01 at 23 16 42" src="https://github.com/user-attachments/assets/45a87e83-339b-4523-8bc6-ad5b28958b2e" />
+Figure 3: Feature correlation matrix
+
+---
+# Our Modelling Approach
+Baseline Model:
+- Logistic Regression (interpretable baseline model)
+- Advanced Models
+- Random Forest
+- XGBoost
+- CatBoost
+Final Model:
+- Stacked ensemble model combining all base learners with a logistic regression meta-learner
+Rationale for this approach
+- Preserves interpretability through our linear meta-model
+- Improves predictive performance through ensemble learning
+- Balances model robustness for clinical contexts
+
+---
+# Model Training
+
+Tools Used:
+- Python
+- Pandas / NumPy
+- Scikit-learn
+- RandomForest
+- XGBoost
+- CatBoost
+- SHAP
+- Streamlit
+  
+Training Pipeline:
+- Data (Train-test) splitting: 80/20 train-test split with out-of-fold (OOF) validation
+- Cross-validation: Stratified K-Fold cross-validation with OOF predictions for robust evaluation
+- Hyperparameter optimization: Threshold tuning using cost-sensitive (9:1) and F1-optimized strategies
+- Probability calibration: Isotonic regression applied to improve probability reliability
+- Final modeling: Stacked ensemble built using our calibrated base models and meta-learner
+
+--- 
+# Results 
+<img width="1422" height="736" alt="Baseline Table" src="https://github.com/user-attachments/assets/992e5822-c75a-44d3-a69e-d766301b4101" />
+## Baseline Model 
+
+<img width="1796" height="876" alt="Final Model" src="https://github.com/user-attachments/assets/6895c333-21ec-4d4f-a8d3-2ed86c585d10" />
+## Final Stacked Model
+---
+# Model Explainability 
+SHAP (SHapley Additive exPlanations) is used to explain individual model predictions.
+
+It enables healthcare providers to see:
+- Which features contribute to increased risk
+- Which features contribute to reduced risk
+- The key factors driving each specific prediction
+
+<img width="713" height="205" alt="Screenshot 2026-05-01 at 23 41 53" src="https://github.com/user-attachments/assets/67e654a7-df62-41f8-b22f-c8fcebcb7b80" />
+
+Figure 4: Global Explainability for the model
+
+<img width="438" height="277" alt="Screenshot 2026-05-01 at 23 42 14" src="https://github.com/user-attachments/assets/40151d47-40ff-4f6c-bca8-abc9067e7ba5" />
+
+Figure 5: Local Explainability for an individual patient
+
+---
+# Key Insights 
+- The stacked ensemble approach led to more stable and consistent performance than any single model
+- Calibration techniques improved the accuracy and reliability of predicted probabilities
+- SHAP explanations enhanced transparency, making model outputs more interpretable and clinically meaningful
+- The dual-threshold design supports flexible decision-making, balancing patient safety with overall performance objectives
+---
+
+# Conclusion
+
+This project presents a complete machine learning pipeline for predicting ICU mortality risk, covering data preprocessing, model development, interpretability, and deployment.
+
+_It is designed as a clinical decision support tool to assist decision-making rather than replace clinical expertise. This project is for educational and research purposes and not affiliated with or endorsed by any of the healthcare organizations referenced in our documentation._
+
+---
+# Future Work
+- Prospective testing in real-world clinical environments
+- Deployment integration with electronic health record (EHR) systems
+- Continuous monitoring for model drift and performance changes
+- Integration of healthcare provider feedback to guide system improvements
+- A second-opinion toggle powered by a supporting model to provide alternative risk estimates for comparison
+
+---
+# How To Run 
+Using Terminal, install dependencies as follows
+```bash
+# install dependencies
+pip install -r requirements.txt
+git clone https://github.com/your-username/DATA4382_ICURiskPrediction.git
+# run streamlit app
+streamlit run icu_deployment.py
+
+---
+
+
