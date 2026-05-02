@@ -168,13 +168,13 @@ streamlit run icu_deployment.py
 - final_merged_cleaned_preprocessed.csv - Processed dataset
 
 Modeling Pipeline: 
-- Step 1: Remerging data from eICU SQL files (Remerging_data_step1.ipynb)
-- Step 2: Rough logistic regression model post remerging (Rough_baseline_results_step2.ipynb)
-- Step 3: Data preprocessing and cleaning (Data_cleaning_step3.ipynb)
-- Step 4: Baseline logistic regression model after data preprocessing (Baseline_after_preprocessing_step4.ipynb)
-- Step 5: Finding the best stacked ensemble combination strategy (Best_stackedmodel_step5.ipynb)
-- Step 6: Building the Streamlit application (ICU_Deployment_Streamlit.ipynb)
-- Final processed dataset after following all steps (final_merged_merged_cleaned_preprocessed.csv)
+- Step 1: Data re-merging from eICU SQL tables (Step1_Remerging_Data.ipynb)
+- Step 2: Initial logistic regression baseline on merged data (Step2_Rough_Baseline_Results.ipynb)
+- Step 3: Data preprocessing and cleaning (Step3_Data_Cleaning.ipynb)
+- Step 4: Refined baseline logistic regression after preprocessing (Step4_Baseline_After_Preprocessing.ipynb)
+- Step 5: Selection and optimization of stacked ensemble strategy (Step5_Best_Stackedmodel.ipynb)
+- Step 6: Development of the Streamlit clinical dashboard (ICU_dashboard.py)
+- Final Output: Fully processed dataset used for modeling (final_merged_cleaned_preprocessed.csv)
 
 Presentations: 
 - Milestone 1 presentation (ICU_DB_P1.pdf)
