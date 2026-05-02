@@ -104,10 +104,10 @@ Training Pipeline:
 
 --- 
 # Results 
-**Baseline Model**
+## Baseline Model
 <img width="1617" height="972" alt="Baseline Model" src="https://github.com/user-attachments/assets/a638b256-d516-4971-835a-e1ea2b4c2262" />
 
-**Final Stacked Model**
+## Final Stacked Model
 <img width="1796" height="876" alt="Final Model" src="https://github.com/user-attachments/assets/6895c333-21ec-4d4f-a8d3-2ed86c585d10" />
 
 ---
