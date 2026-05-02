@@ -6,4 +6,5 @@ Intensive Care Units (ICUs) operate in fast-paced, high-stakes environments wher
 This project aims to assist clinicians by generating real-time, interpretable risk estimates for patient mortality using structured electronic health record (EHR) data.
 
 Rather than replacing clinical expertise, the goal is to complement it by offering transparent, data-driven decision support that can improve situational awareness and support more informed clinical decisions.
+
 ---
