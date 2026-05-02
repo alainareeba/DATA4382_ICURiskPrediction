@@ -19,8 +19,8 @@ Key components include:
 - Built-in SHAP-based explainability to interpret individual patient-level predictions
 - An interactive Streamlit dashboard for clinical exploration and use
 - Patient cohort-level evaluation section for assessing overall model performance, assisting data analysis and model retraining
-ICU Dashboard:
-https://data4382icuriskprediction.streamlit.app/
+  
+- ICU Dashboard: https://data4382icuriskprediction.streamlit.app/
 ---
 
 # Our Pipeline 
@@ -28,8 +28,7 @@ https://data4382icuriskprediction.streamlit.app/
 
 ---
 # Data
-- eICU Collaborative Research Database
-https://physionet.org/content/eicu-crd-demo/2.0.1/
+- eICU Collaborative Research Database: https://physionet.org/content/eicu-crd-demo/2.0.1/
 - Dataset Information
 Number of patients: 2,520
 Number of features: 87
