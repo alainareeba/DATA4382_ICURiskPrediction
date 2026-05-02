@@ -104,13 +104,11 @@ Training Pipeline:
 
 --- 
 # Results 
-<img width="1422" height="736" alt="Baseline Table" src="https://github.com/user-attachments/assets/992e5822-c75a-44d3-a69e-d766301b4101" />
+**Baseline Model**
+<img width="1617" height="972" alt="Baseline Model" src="https://github.com/user-attachments/assets/a638b256-d516-4971-835a-e1ea2b4c2262" />
 
-Baseline Model 
-
+**Final Stacked Model**
 <img width="1796" height="876" alt="Final Model" src="https://github.com/user-attachments/assets/6895c333-21ec-4d4f-a8d3-2ed86c585d10" />
-
-Final Stacked Model
 
 ---
 # Model Explainability 
