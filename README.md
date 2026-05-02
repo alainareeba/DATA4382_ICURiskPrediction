@@ -105,10 +105,13 @@ Training Pipeline:
 --- 
 # Results 
 <img width="1422" height="736" alt="Baseline Table" src="https://github.com/user-attachments/assets/992e5822-c75a-44d3-a69e-d766301b4101" />
-## Baseline Model 
+
+Baseline Model 
 
 <img width="1796" height="876" alt="Final Model" src="https://github.com/user-attachments/assets/6895c333-21ec-4d4f-a8d3-2ed86c585d10" />
-## Final Stacked Model
+
+Final Stacked Model
+
 ---
 # Model Explainability 
 SHAP (SHapley Additive exPlanations) is used to explain individual model predictions.
