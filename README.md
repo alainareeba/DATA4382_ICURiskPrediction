@@ -157,7 +157,26 @@ pip install -r requirements.txt
 git clone https://github.com/your-username/DATA4382_ICURiskPrediction.git
 # run streamlit app
 streamlit run icu_deployment.py
+```
 
 ---
+# Repository Structure
+- README.md — Project documentation
+- icu_dashboard.py — Main Streamlit application
+- requirements.txt — Project dependencies
+- model .pkl files - Trained model artifacts for the stacked ensemble
+- final_merged_cleaned_preprocessed.csv - Processed dataset
+Modeling Pipeline: 
+- Step 1: Remerging data from eICU SQL files (Remerging_data_step1.ipynb)
+- Step 2: Rough logistic regression model post remerging (Rough_baseline_results_step2.ipynb)
+- Step 3: Data preprocessing and cleaning (Data_cleaning_step3.ipynb)
+- Step 4: Baseline logistic regression model after data preprocessing (Baseline_after_preprocessing_step4.ipynb)
+- Step 5: Finding the best stacked ensemble combination strategy (Best_stackedmodel_step5.ipynb)
+- Step 6: Building the Streamlit application (ICU_Deployment_Streamlit.ipynb)
+- Final processed dataset after following all steps (final_merged_merged_cleaned_preprocessed.csv)
+Presentations: 
+- Milestone 1 presentation (ICU_DB_P1.pdf)
+- Milestone 2 presentation (ICU_DB_P2.pdf)
+- Final Executive Presentation (Executive ICU Presentation.pdf)
 
 
